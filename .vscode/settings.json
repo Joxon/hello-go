@@ -1,0 +1,7 @@
+{
+  "go.formatTool": "gofmt",
+  "go.inferGopath": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.goroot": "E:\\Go",
+  "go.useLanguageServer": true
+}
