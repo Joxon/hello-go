@@ -53,10 +53,13 @@ All tools successfully installed. You're ready to Go :).
 
 ## 环境变量 / Env
 
-- GOPATH：Go 项目的工作目录，默认为 C:\Users\Username\go。源代码/src、生成的二进制文件/bin，都放在这个目录。一般在系统变量中属于用户变量，可以根据自己的喜好放置在自定义的路径，但是一般只有一个。在 VSCode 里面可以设置`"go.inferGopath": true`来自动推断工作路径，但是一旦切换到别的工作路径，编译好的第三方工具需要重新下载源码并编译，也可从旧目录中复制过去。
+- GOPATH：Go 项目的工作目录，默认为 C:\Users\Username\go。一般在系统变量中属于用户变量，可以根据自己的喜好放置在自定义的路径，但是一般只有一个。在 VSCode 里面可以设置`"go.inferGopath": true`来自动推断工作路径，但是一旦切换到别的工作路径，编译好的第三方工具需要重新下载源码并编译，也可从旧目录中复制过去。子目录一般有三个，分别是
+  - src / 源代码，其下子目录为包名
+  - bin / 生成的可执行文件，二进制格式
+  - pkg / 生成的包文件，一般后缀为`.a`
 - GOROOT：Go 语言的工具集目录，默认是 C:\Go。
 
-# 运行 / Run
+# 运行单个 Go 文件 / Running a single Go file
 
 `go run hello.go` 或 安装[Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)后右键点击`Run Code`。
 
@@ -64,3 +67,15 @@ All tools successfully installed. You're ready to Go :).
 
 - [English Version](https://tour.golang.org/welcome/1)
 - [中文版](https://tour.go-zh.org/welcome/1)
+- [How to Write Go Code（推荐，介绍了 Go 项目的基本排布方式）](https://golang.org/doc/code.html)
+- [go-filesystem-structure by flaviocopes](https://flaviocopes.com/go-filesystem-structure/)
+
+> ## Overview
+>
+> - Go programmers typically keep all their Go code in a single workspace.
+> - A workspace contains many version control repositories (managed by Git, for example).
+> - Each repository contains one or more packages.
+> - Each package consists of one or more Go source files in a single directory.
+> - The path to a package's directory determines its import path.
+>
+> Note that this differs from other programming environments in which every project has a separate workspace and workspaces are closely tied to version control repositories.
